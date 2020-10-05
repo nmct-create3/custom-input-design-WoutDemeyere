@@ -743,12 +743,6 @@ input::placeholder {
 }
 
 
-@media (prefers-color-scheme: dark) {
-    .c-custom-option__fake-input {
-        border-color: var(--global-input-borderColor--dark);
-    }
-}
-
 .c-custom-option__fake-input:hover {
     border: 1px solid var(--global-input-hover-borderColor);
 }  
@@ -788,6 +782,17 @@ input::placeholder {
 .c-option--hidden:checked+.c-custom-option .c-custom-option__symbol {
     opacity: 1;
     transition: opacity var(--transition-alpha);
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .c-custom-option__fake-input {
+        background-color: var(--global-input-borderColor--dark);
+        border-color: var(--global-input-borderColor--dark);
+    }
+    .c-custom-option__fake-input:hover {
+        border-color: var(--global-input-hover-borderColor--dark);
+    }
 }
 
 .c-option-list {
